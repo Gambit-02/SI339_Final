@@ -84,7 +84,7 @@ body{
     
     #intro{
         height: 50vw;
-        background-image: url("images/ukiyoe_skeleton.jpg");
+        background-image: url("/images/ukiyoe_skeleton.jpg");
         background-attachment: fixed;
         background-position:top;
         background-repeat: no-repeat;
@@ -114,7 +114,7 @@ body{
     }
     #paralax2{
         height: 50vw;
-        background-image: url("images/ukiyoe_skeleton.jpg");
+        background-image: url("/images/ukiyoe_skeleton.jpg");
         background-attachment: fixed;
         background-position:top;
         background-repeat: no-repeat;
@@ -150,7 +150,6 @@ header {
 }
 body{
     background-color: #FEFAE0;
-    /* background-image: url("https://collectionapi.metmuseum.org/api/collection/v1/iiif/45434/134438/main-image"); */
     background-repeat: no-repeat; 
     background-size: cover;
     font-family: "Montserrat", sans-serif;
