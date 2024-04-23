@@ -60,7 +60,7 @@
     }
     #intro{
         height: 40vw;
-        background-image: url("/images/history-titleCard.jpg");
+        background-image: url("/SI339_Final/images/history-titleCard.jpg");
         background-attachment: fixed;
         background-position:top;
         background-repeat: no-repeat;
@@ -148,7 +148,7 @@ body{
 
 #intro{
     height: 50vw;
-    background-image: url("/images/history-titleCard.jpg");
+    background-image: url("/SI339_Final/images/history-titleCard.jpg");
     background-attachment: fixed;
     background-position:bottom;
     background-repeat: no-repeat;
