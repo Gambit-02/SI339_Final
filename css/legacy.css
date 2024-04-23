@@ -1,0 +1,254 @@
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    z-index: 999;
+    padding: 1em;
+    background-color: black;
+    color: white;
+    opacity: 0;
+  }
+  .skip-link:focus {
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
+  }
+  @media (max-width: 768px) {
+    body{
+        text-align: center;
+        background-color: #FEFAE0;
+    }
+    .navLinks{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: rgb(121, 125, 98);
+    }
+    .navLinks li{
+        font-size: 4vw;
+        background-color: rgb(121, 125, 98);
+        float: left;
+    }
+    .navLinks li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 1vw 1vw;
+        text-decoration: none;
+      }
+      .navLinks li a:hover, .navLinks li a:focus{
+        background-color: rgb(155, 155, 122);
+      }
+      .currentLink{
+        padding: 0% 3% 0% 3%;
+        background-color: rgb(63, 66, 56);
+      }
+      #titleCard{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: rgb(255, 225, 168,.6);
+        margin: 10%;
+        height: 20vw;
+        animation-name: titleCardFade;
+        animation-duration: 2s;
+        z-index: 1;
+    }
+    #intro{
+        height: 40vw;
+        background-image: url("https://collectionapi.metmuseum.org/api/collection/v1/iiif/45434/134438/main-image");
+        background-attachment: fixed;
+        background-position:top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .cardPic{
+        display: none;
+    }
+    #cardContainer img{
+        width: 75%;
+        margin: auto;
+    }
+    .card{
+        margin: 10% 0% 10% 0%;
+        background-color: rgb(250, 237, 205);
+    }
+    .card h2{
+        font-size: 3vw;
+    }
+}
+  @media (min-width: 769px){
+header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+body{
+    background-color: #FEFAE0;
+    /* background-image: url("https://collectionapi.metmuseum.org/api/collection/v1/iiif/45434/134438/main-image"); */
+    background-repeat: no-repeat; 
+    background-size: cover;
+    font-family: "Montserrat", sans-serif;
+    
+}
+
+.navLinks{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(121, 125, 98);
+}
+.navLinks li{
+    font-size: 2vw;
+    background-color: rgb(121, 125, 98);
+    float: left;
+}
+.navLinks li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1vw 1vw;
+    text-decoration: none;
+  }
+  .navLinks li a:hover{
+    background-color: rgb(155, 155, 122);
+  }
+  .currentLink{
+    padding: 0% 3% 0% 3%;
+    background-color: rgb(63, 66, 56);
+  }
+
+#titleCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(255, 225, 168,.6);
+    margin: 0% 10% 0% 10%;
+    height: 20vw;
+    animation-name: titleCardFade;
+    animation-duration: 2s;
+    z-index: 1;
+}
+@keyframes titleCardFade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+#titleCard > h1{
+    color: #472D30;
+    font-size: 5vw;
+    font-weight: 700;
+}
+#titleCard > h2{
+    color: #472D30;
+    font-size: 3vw;
+    font-weight: 700;
+}
+
+#intro{
+    height: 50vw;
+    background-image: url("/images/impression-sunrise-claude-monet.jpg");
+    background-attachment: fixed;
+    background-position:top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#cardContainer{
+    margin: 5vw;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+}
+.card {
+    position: relative;
+    width: 30%;
+    height: 60vh;
+    flex: 1 1 5%;
+    margin: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background-color: #eee; /* Default background */
+}
+
+.cardTitle h2, .cardPic img, .cardInfo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease;
+}
+
+.cardTitle h2{
+    z-index: 3; /* Higher than cardInfo */
+    opacity: 1;
+    text-align: center;
+    align-content: center;
+    font-weight: 700;
+    font-size: 2vw;
+    color: #FEFAE0;
+}
+.cardPic {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.cardPic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cardInfo {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 1; /* Lower than cardTitle and cardPic */
+    opacity: 0;
+    background-color: rgb(233, 237, 201, 0.7);
+}
+.cardInfo img{
+    width: 50%;
+}
+.cardInfo p{
+    text-align: center;
+    align-self: center;
+    margin: 5%;
+}
+
+.card:hover .cardTitle, .card:hover .cardPic {
+    opacity: 0;
+}
+
+.card:hover .cardInfo {
+    opacity: 1;
+}
+.card:hover {
+    flex-grow: 99; /* Causes the hovered card to expand */
+}
+.card:not(:hover) {
+    opacity: 1; /* Fades out cards that are not hovered */
+}
+
+}
