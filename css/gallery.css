@@ -84,7 +84,7 @@ body{
     
     #intro{
         height: 50vw;
-        background-image: url("/images/ukiyoe_skeleton.jpg");
+        background-image: url("Final Project/images/ukiyoe_skeleton.jpg");
         background-attachment: fixed;
         background-position:top;
         background-repeat: no-repeat;
